@@ -111,5 +111,46 @@ namespace PopovMatyninKurs
                 File.AppendAllText("data.json", JsonConvert.SerializeObject(memlist[i]));
             }
         }
+
+        private void LoadBut_Click(object sender, RoutedEventArgs e)
+        {
+            ListM.SelectedIndex = -1;
+            ListM.Items.Clear();
+            KateComb.Items.Clear();
+            count = 0;
+            IMG.Source = null;
+            List<string> povt = new List<string>();
+            JsonTextReader read = new JsonTextReader(new StreamReader("data.json"));
+            read.SupportMultipleContent = true;
+            while (true)
+            {
+                if (!read.Read())
+                {
+                    break;
+                }
+                JsonSerializer serializer = new JsonSerializer();
+                Mem mem = serializer.Deserialize<Mem>(read);
+                memlist.Add(mem);
+                count++;
+                ListM.Items.Add(mem.GetName());
+            }
+            for (int i = 0; i < memlist.Count; i++)
+            {
+                bool uwu = false;
+                    for (int j = 0; j < povt.Count; j++)
+                    {
+                        if (povt[j] == memlist[i].GetKate())
+                        {
+                            uwu = true;
+                            break;
+                        }
+                    }
+                    if (uwu == false)
+                    {
+                        KateComb.Items.Add(memlist[i].GetKate());
+                        povt.Add(memlist[i].GetKate());
+                    }
+            }
+        }
     }
 }
