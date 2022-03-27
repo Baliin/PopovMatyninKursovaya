@@ -17,6 +17,7 @@ namespace PopovMatyninKurs
         public List<Mem> memlist = new List<Mem>();
         AddMem addMem = new AddMem();
         int count = 0;
+        int sort = 0;
         bool u = false;
         public MainWindow()
         {
@@ -74,7 +75,7 @@ namespace PopovMatyninKurs
 
         private void DelBut_Click(object sender, RoutedEventArgs e)
         {
-            for (int i = 0; i < memlist.Count; i++)
+            for (int i = 0; i < sort; i++)
             {
                 if (memlist[i].GetName() == ListM.SelectedItem.ToString())
                 {
@@ -84,13 +85,13 @@ namespace PopovMatyninKurs
                     ListM.SelectedIndex = -1;
                     IMG.Source = null;
                     break;
-                    //////////bag with combobox
                 }
             }
         }
 
         private void KateComb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            sort = 0;
             ListM.Items.Clear();
             IMG.Source = null;
             for (int i = 0; i < memlist.Count; i++)
@@ -99,6 +100,7 @@ namespace PopovMatyninKurs
                 {
                     ListM.Items.Add(memlist[i].GetName());
                     ListM.SelectedIndex = -1;
+                    sort++;
                 }
             }
         }
