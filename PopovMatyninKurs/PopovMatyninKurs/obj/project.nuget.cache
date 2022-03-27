@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "KY8DRcTIg9nxZyDBoZE9TX4RVyI+L6tg7NtOiD+4E+p8oga1YtV/sOyeHlAUlDdoO8ITjevyBxZ/taH5zLQFZg==",
+  "dgSpecHash": "a8QT5Eg9aJbVHptoFWQxgqrfLVlrtd8WUsdEbm8qPcoRjOKg0xhMawpIRKOySOsdvrjYfo7EZa8nvteL42qRYw==",
   "success": true,
   "projectFilePath": "E:\\Лабы актуальные\\ПиОГИ\\Курсовая\\PopovMatyninKurs\\PopovMatyninKurs\\PopovMatyninKurs.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\gotot\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

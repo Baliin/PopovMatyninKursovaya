@@ -1,17 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using Microsoft.Win32;
+using Newtonsoft.Json;
 
 namespace PopovMatyninKurs
 {
@@ -20,7 +14,7 @@ namespace PopovMatyninKurs
     /// </summary>
     public partial class MainWindow : Window
     {
-        private List<Mem> memlist = new List<Mem>();
+        public List<Mem> memlist = new List<Mem>();
         AddMem addMem = new AddMem();
         int count = 0;
         bool u = false;
@@ -75,7 +69,7 @@ namespace PopovMatyninKurs
                 src.CacheOption = BitmapCacheOption.OnLoad;
                 src.EndInit();
                 IMG.Source = src;
-            } 
+            }
         }
 
         private void DelBut_Click(object sender, RoutedEventArgs e)
@@ -90,6 +84,7 @@ namespace PopovMatyninKurs
                     ListM.SelectedIndex = -1;
                     IMG.Source = null;
                     break;
+                    //////////bag with combobox
                 }
             }
         }
@@ -105,6 +100,15 @@ namespace PopovMatyninKurs
                     ListM.Items.Add(memlist[i].GetName());
                     ListM.SelectedIndex = -1;
                 }
+            }
+        }
+
+        private void SaveBut_Click(object sender, RoutedEventArgs e)
+        {
+            File.WriteAllText("data.json", string.Empty);
+            for (int i = 0; i < memlist.Count; i++)
+            {
+                File.AppendAllText("data.json", JsonConvert.SerializeObject(memlist[i]));
             }
         }
     }

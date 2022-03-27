@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace PopovMatyninKurs
 {
-    internal class Mem
+    public class Mem
     {
-        private string name, kate, way;
+        public string name, kate, way;
 
         public Mem(string name, string kate, string way)
         {

@@ -24,3 +24,5 @@ E:\Лабы актуальные\ПиОГИ\Курсовая\PopovMatyninKurs\Po
 E:\Лабы актуальные\ПиОГИ\Курсовая\PopovMatyninKurs\PopovMatyninKurs\obj\Debug\net6.0-windows\PopovMatyninKurs.Properties.Resources.resources
 E:\Лабы актуальные\ПиОГИ\Курсовая\PopovMatyninKurs\PopovMatyninKurs\obj\Debug\net6.0-windows\PopovMatyninKurs.csproj.GenerateResource.cache
 E:\Лабы актуальные\ПиОГИ\Курсовая\PopovMatyninKurs\PopovMatyninKurs\obj\Debug\net6.0-windows\Delivery.baml
+E:\Лабы актуальные\ПиОГИ\Курсовая\PopovMatyninKurs\PopovMatyninKurs\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+E:\Лабы актуальные\ПиОГИ\Курсовая\PopovMatyninKurs\PopovMatyninKurs\obj\Debug\net6.0-windows\PopovMatyninKurs.csproj.CopyComplete
